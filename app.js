@@ -1,0 +1,102 @@
+//------------------data-----------------------
+
+
+
+
+
+
+//---------------elements-------------------------------------------------
+const BASE_URL = "https://pokeapi.co/api/v2";
+
+const form = document.getElementById("search-form");
+const input = document.getElementById("search-input");
+const statusEl = document.getElementById("status");
+const cardEl = document.getElementById("pokemon-card");
+const teamEl = document.getElementById("team");
+
+
+//--------------------------------functions--------------------
+
+
+
+const showPokemon = (pkmn) => {
+  document.getElementById("card-image").src = pkmn.sprites.front_default;
+  document.getElementById("card-id").textContent = pkmn.id;
+  document.getElementById("card-name").textContent = pkmn.name;
+  document.getElementById("card-height").textContent = pkmn.height;
+  document.getElementById("card-weight").textContent = pkmn.weight;
+  document.getElementById("card-types").textContent = pkmn.types;
+  document.getElementById("card-abilities").textContent = pkmn.abilities;
+  document.getElementById("card-stats").textContent = pkmn.stats;
+
+
+
+  cardEl.hidden = false;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+async function handleInput(event) {
+  event.preventDefault();
+
+  const pokemon = input.value.toLowerCase().trim();
+
+
+  //Validation
+
+
+
+
+
+
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+
+  const pkmn = await response.json();
+
+console
+  //call function
+  showPokemon(pkmn)
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//----------------------listeners------------------------------
+
+
+form.addEventListener("submit", handleInput)
+
+
+
+
+
+
+
+
+
+//--------------------run at load------------------------------

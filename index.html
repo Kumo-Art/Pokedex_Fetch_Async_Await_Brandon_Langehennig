@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Pokédex Fetch</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h1>Pokédex</h1>
+
+    <form id="search-form">
+        <input id="search-input" placeholder="Name or ID (e.g. pikachu, 25)" />
+        <button type="submit">Search</button>
+    </form>
+
+    <p id="status"></p>
+    <div id="pokemon-card" class="pokemon-card" hidden>
+        <img id="card-image" class="card-image" alt="" width="120" height="120">
+        <h2 id="card-id"></h2>
+        <p id="card-name" class="card-login"></p>
+        <p id="card-height" class="card-login"></p>
+        <p id="card-weight" class="card-bio"></p>
+        <p id="card-types" class="card-login"></p>
+        <p id="card-abilities" class="card-bio"></p>
+        <p id="card-stats" class="card-login"></p>
+    </div>
+
+    <h2>Team</h2>
+    <div id="team"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

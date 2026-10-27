@@ -1,0 +1,15 @@
+.pokemon-card {
+      display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 12px;
+}
+
+
+
+
+.pokemon-card[hidden] {
+    display: none;
+}
