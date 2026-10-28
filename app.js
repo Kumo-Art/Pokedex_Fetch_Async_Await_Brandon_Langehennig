@@ -100,6 +100,4 @@ form.addEventListener("submit", handleInput)
 
 
 
-
-
 //--------------------run at load------------------------------
