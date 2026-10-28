@@ -9,11 +9,12 @@
 </head>
 
 <body>
-    <h1>Pokédex</h1>
+    <img class="h-100 w-400 object-fill" src="/assets/images.jpg">
+    <h1 class="flex justify-center text-4xl font-bold mt-20">Pokédex</h1>
 
-    <form id="search-form">
+    <form id="search-form" class="flex justify-center mt-4">
         <input id="search-input" placeholder="Name or ID (e.g. pikachu, 25)" />
-        <button type="submit">Search</button>
+        <button type="submit" class="ml-2">Search</button>
     </form>
 
     <p id="status"></p>
@@ -26,11 +27,12 @@
         <p id="card-types" class="card-login"></p>
         <p id="card-abilities" class="card-bio"></p>
         <p id="card-stats" class="card-login"></p>
+        <img id="form-image" class="form-image" hidden>
     </div>
-
-    <h2>Team</h2>
-    <div id="team"></div>
-
+    <div class="flex justify-center m-20">
+        <button id="fuse-btn">Fusions</button>
+    </div>
+   
     <script src="app.js"></script>
 </body>
 

@@ -3,8 +3,14 @@
   gap: 20px;
   padding: 20px;
   background: #ffffff;
-  border: 1px solid #d0d7de;
+  border: 1px solid #e62424;
   border-radius: 12px;
+  flex-direction: column;
+  width: 25%;
+  height: 10%;
+  justify-self: center;
+  margin-top: 40px;
+  
 }
 
 
@@ -13,3 +19,10 @@
 .pokemon-card[hidden] {
     display: none;
 }
+
+.form-image[hidden] {
+    display: none;
+}
+
+
+
